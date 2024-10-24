@@ -112,7 +112,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     FloatingActionButton(
                         onClick = {
-                            isToAddTask = !isToAddTask
+
                         },
                         modifier = Modifier.padding(10.dp)
                     ) {
@@ -138,10 +138,9 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier.fillMaxSize(),
                                 contentAlignment = Alignment.Center
                             ) {
-                                Text(task.task,
+                                Text( ,
                                     modifier = Modifier.clickable {
-                                        showAlert = !showAlert
-                                        taskToDelete = task
+
                                     }
                                 )
                             }
@@ -171,12 +170,12 @@ class MainActivity : ComponentActivity() {
                             }
 
                             OutlinedTextField(
-                                value = taskText,
-                                onValueChange = { value ->
-                                    taskText = value
+                                value = ,
+                                onValueChange = {
+
                                 },
                                 placeholder = {
-                                    Text("Enter the new task!")
+
                                 },
                                 modifier = Modifier.padding(5.dp)
                             )
@@ -184,9 +183,7 @@ class MainActivity : ComponentActivity() {
                             Button(
                                 onClick = {
                                     if(taskText.isNotBlank()){
-                                        viewModel.addTask(Task(task = taskText))
-                                        Toast.makeText(this@MainActivity, "Task added successfully!", Toast.LENGTH_SHORT).show()
-                                        isToAddTask = !isToAddTask
+
                                     }
                                 },
                                 colors = ButtonDefaults.buttonColors(Color(0xF3A76DE8))
@@ -204,11 +201,7 @@ class MainActivity : ComponentActivity() {
                     confirmButton = {
                         Button(
                             onClick = {
-                                taskToDelete?.let {
-                                    viewModel.deleteTask(it)
-                                    taskToDelete = null
-                                    showAlert = !showAlert
-                                }
+
                             }
                         ) {
                             Text("Yes")
@@ -217,8 +210,7 @@ class MainActivity : ComponentActivity() {
                     dismissButton = {
                         Button(
                             onClick = {
-                                showAlert = !showAlert
-                                taskToDelete = null
+
                             }
                         ) {
                             Text("No")
