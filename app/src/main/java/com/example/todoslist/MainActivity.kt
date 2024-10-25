@@ -138,7 +138,7 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier.fillMaxSize(),
                                 contentAlignment = Alignment.Center
                             ) {
-                                Text( ,
+                                Text( "",
                                     modifier = Modifier.clickable {
 
                                     }
@@ -170,7 +170,7 @@ class MainActivity : ComponentActivity() {
                             }
 
                             OutlinedTextField(
-                                value = ,
+                                value = "",
                                 onValueChange = {
 
                                 },
